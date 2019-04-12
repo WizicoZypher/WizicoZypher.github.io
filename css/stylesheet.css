@@ -119,8 +119,7 @@ html {
 
 .sidenav {
     width: auto;
-    position: sticky;
-    position: -webkit-sticky;
+    position: fixed;
     z-index: 1;
     left: 14px;
     top: 36%;
