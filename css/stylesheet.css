@@ -121,7 +121,7 @@ html {
     width: auto;
     position: fixed;
     z-index: 1;
-    left: 14px;
+    left: 0px;
     top: 36%;
     background: rgba(0, 0, 0, 0);
     overflow-x: hidden;
@@ -213,6 +213,36 @@ html {
     top: 80px;
     right: 30px;
     z-index: 1;
+}
+
+.cs-category-box {
+    width:auto;
+    position: fixed;
+    z-index:1;
+    top:120px;
+    left:100px;
+    background-color:rgba(0,0,0,0.4);
+    border:1px solid rgb(9, 167, 214);
+    border-radius:5px;
+    overflow-x: hidden;
+    width:auto;
+
+}
+
+.cs-category-container {
+    padding:10px
+}
+
+.cs-category-title {
+    color:white;
+    font-size:20px;
+}
+
+.cs-category-type {
+    color:white;
+    list-style-type:none;
+    padding-top:10px;
+    padding-bottom:10px;
 }
 
 /*body code*/
