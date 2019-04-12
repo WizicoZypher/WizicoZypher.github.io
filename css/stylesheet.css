@@ -111,7 +111,112 @@ html {
         background-color: rgba(0, 0, 0, 0);
         margin-left: -500px;
     }
+    .cs-category-box {
+        width:auto;
+        position: fixed;
+        z-index:1;
+        top:140px;
+        left:100px;
+        background-color:rgba(0,0,0,0.4);
+        border:1px solid rgb(9, 167, 214);
+        border-radius:5px;
+        overflow-x: hidden;
+    
+    }
+    
+    .cs-category-container {
+        padding:10px
+    }
+    
+    .cs-category-title {
+        color:white;
+        font-size:20px;
+    }
+    
+    .cs-category-type {
+        color:white;
+        list-style-type:none;
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+    
+    .cs-cart {
+        width:300px;
+        position:fixed;
+        z-index:1;
+        top:140px;
+        right:100px;
+        background-color:rgba(0,0,0,0.4);
+        border:1px solid rgb(9, 167, 214);
+        border-radius:5px;
+    }
+    
+    .cs-cart-container {
+        padding:5px;
+    }
+    
+    .cs-cart-header {
+        font-size:24px;
+        color:rgb(9, 167, 214);
+        border-bottom:1px solid rgb(9, 167, 214);
+    }
+    
+    .cs-cart-item {
+        border-bottom:1px solid rgb(9, 167, 214);
+        color:white;
+    }
+    
+    .cs-cart-item:hover {
+        color:rgb(9, 167, 214);
+    }
+    
+    
+    .cs-cart-item-head{
+        font-size:20px;
+    }
+    
+    .cs-cart-item-desc{
+        font-size:12px;
+    }
+    
+    .cs-cart-item-desc li{
+        list-style-type:none;
+        margin-left:-20px;
+    }
+    
+    .cs-cart-price {
+        color: rgb(9, 167, 214);
+        border-left:1px solid rgb(9, 167, 214);
+        border-bottom:1px solid rgb(9, 167, 214);
+        position: absolute; 
+        bottom: 0; 
+        right: 0; 
+        padding-right:20px;
+        height:100%;
+        text-align:right;
+    }
 }
+@media (max-width:999px) {
+    .cs-category-title {
+        display:none;
+    }
+    
+    .cs-category-type {
+        display:none;
+    }
+
+    .cs-cart-header {
+        display:none;
+    }
+
+    .cs-cart-item-desc {
+        display:none;
+    }
+    .cs-cart-prize {
+        display:none;
+    }
+}
+
 
 @media (min-width:1680px) {}
 
@@ -215,35 +320,7 @@ html {
     z-index: 1;
 }
 
-.cs-category-box {
-    width:auto;
-    position: fixed;
-    z-index:1;
-    top:120px;
-    left:100px;
-    background-color:rgba(0,0,0,0.4);
-    border:1px solid rgb(9, 167, 214);
-    border-radius:5px;
-    overflow-x: hidden;
-    width:auto;
 
-}
-
-.cs-category-container {
-    padding:10px
-}
-
-.cs-category-title {
-    color:white;
-    font-size:20px;
-}
-
-.cs-category-type {
-    color:white;
-    list-style-type:none;
-    padding-top:10px;
-    padding-bottom:10px;
-}
 
 /*body code*/
 
