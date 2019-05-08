@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Illegear Support Page</title>
+</head>
+
+<body class="bg-dark">
+    <div class="row" style="background-color:black;color:red;padding-left:40px;position:fixed;width:100%">
+        <h2>Space for the navbar</h2>
+    </div>
+    <div class="jumbotron jumbotron-fluid bg-support">
+        <div class="container-fluid">
+            <h1 style="text-align:center;height:250px">Space for Support Artwork</h1>
+        </div>
+    </div>
+    <div class="container bg-dark text-white">
+
+        <div class="row mb-5">
+            <div class="d-flex flex-column col-6-sm">
+                <h1>Find your product</h1>
+                <form class="lookup-form" action="">
+                    <div class="cs-formhead">Please enter your model or serial number to find your product</div>
+                    <select id="support-search-method" onchange="Search_Method()">
+                        <option value="search-model">Model</option>
+                        <option value="search-serial">Serial Number</option>
+                    </select>
+                    <div id="search-method"></div>
+
+                </form>
+            </div>
+            <div class="col-6 ml-5">
+                <div class="row">
+                    <div class="col-5">
+                        
+                    </div>
+                    <div class="col-7">
+                        <h4>Product support for Onyx</h4>
+                        <img style="width:270px;height:270px;" src="images/illegear-onyx.jpg" alt="">
+                    </div>
+                </div>
+                
+
+
+            </div>
+
+        </div>
+        <div class="row">
+            <h1>Drivers to download</h1>
+            <table class="table table-dark">
+                <tbody>
+                    <tr>
+                        <th scope="row">Intel Chipset</th>
+                        <td>
+                            Version 10.1.17541.8066
+                            Intel Chipset Driver
+                        </td>
+                        <td><a href="#">Download</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">Intel Management Engine Component</th>
+                        <td>Version 12.0.2702.2 Intel Management Engine driver and software </td>
+                        <td><a href="#">Download</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Intel Rapid Storage Technology</th>
+                        <td>Version 16.0.1.1018</td>
+                        <td><a href="#">Download</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script>
+        function Search_Method() {
+            var search_method = document.getElementById("support-search-method").value;
+            var model_search = "<input type=\"text\" name=\"model-name\" placeholder=\"Enter your model name\">";
+            var product_search = "<input type=\"text\" name=\"serial-number\" placeholder=\"Enter your serial number\">";
+            var button = "<input class=\"support-submit\" type=\"submit\" value=\"Search\">";
+            if (search_method == "search-model") {
+                document.getElementById("search-method").innerHTML = model_search + "<br>" + button;
+            } else {
+                document.getElementById("search-method").innerHTML = product_search + "<br>" + button;
+            }
+        }
+        window.onload = Search_Method()
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

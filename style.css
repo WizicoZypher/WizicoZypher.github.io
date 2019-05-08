@@ -1,0 +1,58 @@
+.container{
+    display:flex;
+    flex-direction: column;
+}
+
+::placeholder {
+    color:grey;
+}
+
+.cs-formhead {
+    color:white;
+    padding-bottom:10px
+}
+
+#support-search-method {
+    background-color:black;
+    color:white;
+    padding:8px;
+    margin-bottom:10px;
+}
+
+input[type=text] {
+    border:1px solid blue;
+    border-radius:4px;
+    padding:10px;
+    color:#70CCFF;
+    background-color:black;
+    max-width:500px;
+}
+
+input[type=text]:focus {
+    background-color:rgb(54, 54, 54);
+    animation-name:form-text-focus;
+    animation-duration:0.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes form-text-focus{
+    0% {
+        background-color:black;
+    }
+    99% {
+        background-color:rgb(54, 54, 54);
+    }
+}
+
+.support-submit {
+    background-color:black;
+    color:white;
+    padding:7px;
+    margin-top:15px
+}
+
+
+
+.bg-support {
+    background:url("https://image.shutterstock.com/z/stock-photo-happy-young-male-customer-support-executive-working-in-office-739331605.jpg")
+}
