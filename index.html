@@ -27,11 +27,11 @@
             <div class="d-flex flex-column col-5-sm">
                 <h1>Find your product</h1>
                 <form class="lookup-form" action="">
-                    <div class="cs-formhead">Please enter your model or serial number to find your product</div>
-                    <select id="support-search-method" onchange="Search_Method()">
+                    <div class="cs-formhead">Please enter your model to find your product</div>
+                    <!-- <select id="support-search-method" onchange="Search_Method()">
                         <option value="search-model">Model</option>
                         <option value="search-serial">Serial Number</option>
-                    </select>
+                    </select> -->
                     <div id="search-method"></div>
 
                 </form>
@@ -83,7 +83,7 @@
     </div>
 
     <!-- Optional JavaScript -->
-    <script>
+    <!-- <script>
         function Search_Method() {
             var search_method = document.getElementById("support-search-method").value;
             var model_search = "<input type=\"text\" name=\"model-name\" placeholder=\"Enter your model name\">";
@@ -96,7 +96,7 @@
             }
         }
         window.onload = Search_Method()
-    </script>
+    </script> -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
