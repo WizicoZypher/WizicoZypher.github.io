@@ -1,58 +1,107 @@
-.container{
-    display:flex;
+.container {
+    display: flex;
     flex-direction: column;
 }
 
 ::placeholder {
-    color:grey;
+    color: grey;
 }
 
 .cs-formhead {
-    color:white;
-    padding-bottom:10px
+    color: white;
+    padding-bottom: 10px
 }
 
 #support-search-method {
-    background-color:black;
-    color:white;
-    padding:8px;
-    margin-bottom:10px;
+    background-color: black;
+    color: white;
+    padding: 8px;
+    margin-bottom: 10px;
 }
 
 input[type=text] {
-    border:1px solid blue;
-    border-radius:4px;
-    padding:10px;
-    color:#70CCFF;
-    background-color:black;
-    max-width:500px;
+    border: 1px solid blue;
+    border-radius: 4px;
+    padding: 10px;
+    color: #70CCFF;
+    background-color: black;
+    max-width: 500px;
 }
 
 input[type=text]:focus {
-    background-color:rgb(54, 54, 54);
-    animation-name:form-text-focus;
-    animation-duration:0.5s;
+    background-color: rgb(54, 54, 54);
+    animation-name: form-text-focus;
+    animation-duration: 0.5s;
     animation-iteration-count: 1;
 }
 
-@keyframes form-text-focus{
+@keyframes form-text-focus {
     0% {
-        background-color:black;
+        background-color: black;
     }
     99% {
-        background-color:rgb(54, 54, 54);
+        background-color: rgb(54, 54, 54);
     }
 }
 
 .support-submit {
-    background-color:black;
-    color:white;
-    padding:7px;
-    margin-top:15px
+    background-color: black;
+    color: white;
+    padding: 7px;
+    margin-top: 15px
 }
 
-
-
 .bg-support {
-    background:url("https://image.shutterstock.com/z/stock-photo-happy-young-male-customer-support-executive-working-in-office-739331605.jpg")
+    background: url("https://image.shutterstock.com/z/stock-photo-happy-young-male-customer-support-executive-working-in-office-739331605.jpg")
+}
+
+::placeholder {
+    color: white;
+}
+
+.lookup-form {
+    width:100%;
+}
+
+#cs-searchbar {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 12px 12px 12px 12px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#cs-driver-data {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width:100%;
+}
+
+#cs-driver-data li a {
+    background-color: rgba(0, 0, 0, 0);
+    width:auto;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    display: block;
+}
+
+#cs-driver-data li a:hover:not(.header) {
+    background-color: #03a9f4;
+    animation-name: cs-list-hover;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+}
+
+@keyframes cs-list-hover {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    99% {
+        background-color: #03a9f4;
+    }
 }
