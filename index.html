@@ -9,7 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Illegear Support Page</title>
 </head>
@@ -17,9 +18,19 @@
 <body style="background-color:#1f2326;color:white;">
     <div class="row" style="background-color:black;color:red;padding-left:40px;position:fixed;width:100%;z-index:999">
         <h2>Space for the navbar</h2>
-    </div>
-    <div style="height:50px;">
 
+    </div>
+
+    <div class="jumbotron jumbotron-fluid bg-support">
+        <div class="container-fluid">
+            <h1 style="text-align:center;max-height:250px;margin-top:200px">Search for your product</h1>
+            <div class="autocomplete" style="width:300px;">
+                <form autocomplete="off" action="/action_page.php">
+                    <input id="myInput" type="text" name="models" placeholder="Search">
+                </form>
+            </div>
+            </p>
+        </div>
     </div>
     <div class="container-fluid">
         <div class="row">
@@ -37,7 +48,8 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="select-processor" id="select-processor-title" style="display:none;">Select Processor</label>
+                        <label for="select-processor" id="select-processor-title" style="display:none;">Select
+                            Processor</label>
                         <select class="form-control" id="select-processor" style="display:none;" onchange=showGpu()>
                             <option>--Please Select--</option>
                             <option value="i5-8300">i5-8300</option>
@@ -127,21 +139,18 @@
                                     Version 10.1.17541.8066
                                     Intel Chipset Driver
                                 </td>
-                                <td><a href="#"><i
-                                    class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
+                                <td><a href="#"><i class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
 
                             </tr>
                             <tr>
                                 <th scope="row">Intel Management Engine Component</th>
                                 <td>Version 12.0.2702.2 Intel Management Engine driver and software </td>
-                                <td><a href="#"><i
-                                    class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
+                                <td><a href="#"><i class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
                             </tr>
                             <tr>
                                 <th scope="row">Intel Rapid Storage Technology</th>
                                 <td>Version 16.0.1.1018</td>
-                                <td><a href="#"><i
-                                    class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
+                                <td><a href="#"><i class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
                             </tr>
                             <tr>
                                 <th scope="row"></th>
@@ -160,48 +169,148 @@
     </div>
 
 
-        <!-- Optional JavaScript -->
-        <script>
-            var model, processor, GPU;
-            function showProcessor() {
-                var model = document.getElementById("select-model").value;
-                document.getElementById("select-processor").style.display = "block";
-                document.getElementById("select-processor-title").style.display = "block";
+    <!-- Optional JavaScript -->
+    <script>
+        var model, processor, GPU;
+        function showProcessor() {
+            var model = document.getElementById("select-model").value;
+            document.getElementById("select-processor").style.display = "block";
+            document.getElementById("select-processor-title").style.display = "block";
+        }
+        function showGpu() {
+            var processor = document.getElementById("select-processor").value;
+            document.getElementById("select-gpu").style.display = "block";
+            document.getElementById("select-gpu-title").style.display = "block";
+        }
+        function driversearch() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("cs-searchbar");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("cs-driver-data");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                }
+                else {
+                    li[i].style.display = "none";
+                }
             }
-            function showGpu() {
-                var processor = document.getElementById("select-processor").value;
-                document.getElementById("select-gpu").style.display = "block";
-                document.getElementById("select-gpu-title").style.display = "block";
-            }
-            function driversearch() {
-                var input, filter, ul, li, a, i, txtValue;
-                input = document.getElementById("cs-searchbar");
-                filter = input.value.toUpperCase();
-                ul = document.getElementById("cs-driver-data");
-                li = ul.getElementsByTagName("li");
-                for (i = 0; i < li.length; i++) {
-                    a = li[i].getElementsByTagName("a")[0];
-                    txtValue = a.textContent || a.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        li[i].style.display = "";
+        }
+    </script>
+    <script>
+        function autocomplete(inp, arr) {
+            /*the autocomplete function takes two arguments,
+            the text field element and an array of possible autocompleted values:*/
+            var currentFocus;
+            /*execute a function when someone writes in the text field:*/
+            inp.addEventListener("input", function (e) {
+                var a, b, i, val = this.value;
+                /*close any already open lists of autocompleted values*/
+                closeAllLists();
+                if (!val) { return false; }
+                currentFocus = -1;
+                /*create a DIV element that will contain the items (values):*/
+                a = document.createElement("DIV");
+                a.setAttribute("id", this.id + "autocomplete-list");
+                a.setAttribute("class", "autocomplete-items");
+                /*append the DIV element as a child of the autocomplete container:*/
+                this.parentNode.appendChild(a);
+                /*for each item in the array...*/
+                for (i = 0; i < arr.length; i++) {
+                    /*check if the item starts with the same letters as the text field value:*/
+                    if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                        /*create a DIV element for each matching element:*/
+                        b = document.createElement("DIV");
+                        /*make the matching letters bold:*/
+                        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                        b.innerHTML += arr[i].substr(val.length);
+                        /*insert a input field that will hold the current array item's value:*/
+                        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                        /*execute a function when someone clicks on the item value (DIV element):*/
+                        b.addEventListener("click", function (e) {
+                            /*insert the value for the autocomplete text field:*/
+                            inp.value = this.getElementsByTagName("input")[0].value;
+                            /*close the list of autocompleted values,
+                            (or any other open lists of autocompleted values:*/
+                            closeAllLists();
+                        });
+                        a.appendChild(b);
                     }
-                    else {
-                        li[i].style.display = "none";
+                }
+            });
+            /*execute a function presses a key on the keyboard:*/
+            inp.addEventListener("keydown", function (e) {
+                var x = document.getElementById(this.id + "autocomplete-list");
+                if (x) x = x.getElementsByTagName("div");
+                if (e.keyCode == 40) {
+                    /*If the arrow DOWN key is pressed,
+                    increase the currentFocus variable:*/
+                    currentFocus++;
+                    /*and and make the current item more visible:*/
+                    addActive(x);
+                } else if (e.keyCode == 38) { //up
+                    /*If the arrow UP key is pressed,
+                    decrease the currentFocus variable:*/
+                    currentFocus--;
+                    /*and and make the current item more visible:*/
+                    addActive(x);
+                } else if (e.keyCode == 13) {
+                    /*If the ENTER key is pressed, prevent the form from being submitted,*/
+                    e.preventDefault();
+                    if (currentFocus > -1) {
+                        /*and simulate a click on the "active" item:*/
+                        if (x) x[currentFocus].click();
+                    }
+                }
+            });
+            function addActive(x) {
+                /*a function to classify an item as "active":*/
+                if (!x) return false;
+                /*start by removing the "active" class on all items:*/
+                removeActive(x);
+                if (currentFocus >= x.length) currentFocus = 0;
+                if (currentFocus < 0) currentFocus = (x.length - 1);
+                /*add class "autocomplete-active":*/
+                x[currentFocus].classList.add("autocomplete-active");
+            }
+            function removeActive(x) {
+                /*a function to remove the "active" class from all autocomplete items:*/
+                for (var i = 0; i < x.length; i++) {
+                    x[i].classList.remove("autocomplete-active");
+                }
+            }
+            function closeAllLists(elmnt) {
+                /*close all autocomplete lists in the document,
+                except the one passed as an argument:*/
+                var x = document.getElementsByClassName("autocomplete-items");
+                for (var i = 0; i < x.length; i++) {
+                    if (elmnt != x[i] && elmnt != inp) {
+                        x[i].parentNode.removeChild(x[i]);
                     }
                 }
             }
-        </script>
+            /*execute a function when someone clicks in the document:*/
+            document.addEventListener("click", function (e) {
+                closeAllLists(e.target);
+            });
+        }
+        var models = ["Raven","Rogue", "Onyx", "Prodigy"]
+        autocomplete(document.getElementById("myInput"), models);
+    </script>
 
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

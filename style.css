@@ -2,10 +2,35 @@
     .container-fluid {
         display: flex;
         flex-direction: column;
-        width:80%;
+        width: 80%;
     }
 }
 
+.autocomplete-items {
+    position: static;
+    background-color: black;
+    border: 1px solid #007bff;
+    width: 194px;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+
+}
+
+.autocomplete {
+    position: relative;
+    display: inline-block;
+  }
+
+.autocomplete-items div {
+    width:196px;
+    position:absolute;
+    padding: 10px;
+    cursor: pointer;
+    background-color: black;
+    border-bottom: 1px solid #007bff;
+}
 
 ::placeholder {
     color: grey;
@@ -39,8 +64,6 @@ input[type=text]:focus {
     animation-iteration-count: 1;
 }
 
-
-
 .support-submit {
     background-color: black;
     color: white;
@@ -49,7 +72,9 @@ input[type=text]:focus {
 }
 
 .bg-support {
-    background: url("https://image.shutterstock.com/z/stock-photo-happy-young-male-customer-support-executive-working-in-office-739331605.jpg")
+    background: url("images/WhatsApp\ Image\ 2019-05-03\ at\ 13.41.04.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 ::placeholder {
@@ -57,7 +82,7 @@ input[type=text]:focus {
 }
 
 .lookup-form {
-    width:100%;
+    width: 100%;
 }
 
 #cs-searchbar {
@@ -87,12 +112,12 @@ input[type=text]:focus {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width:100%;
+    width: 100%;
 }
 
 #cs-driver-data li a {
     background-color: rgba(0, 0, 0, 0);
-    width:auto;
+    width: auto;
     padding: 12px;
     text-decoration: none;
     font-size: 15px;
@@ -117,9 +142,9 @@ input[type=text]:focus {
 }
 
 select {
-    background-color:#1f2326;
+    background-color: #1f2326;
 }
 
 .view-table {
-    margin:50px 100px 50px 50px
+    margin: 50px 100px 50px 50px
 }
