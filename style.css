@@ -105,3 +105,11 @@ input[type=text]:focus {
         background-color: #03a9f4;
     }
 }
+
+select {
+    background-color:#1f2326;
+}
+
+.view-table {
+    margin:50px 100px 50px 50px
+}
