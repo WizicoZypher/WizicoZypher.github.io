@@ -1,7 +1,11 @@
-.container {
-    display: flex;
-    flex-direction: column;
+@media only screen and (min-width: 1400px) {
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        width:80%;
+    }
 }
+
 
 ::placeholder {
     color: grey;
@@ -35,14 +39,7 @@ input[type=text]:focus {
     animation-iteration-count: 1;
 }
 
-@keyframes form-text-focus {
-    0% {
-        background-color: black;
-    }
-    99% {
-        background-color: rgb(54, 54, 54);
-    }
-}
+
 
 .support-submit {
     background-color: black;
@@ -66,11 +63,24 @@ input[type=text]:focus {
 #cs-searchbar {
     width: 100%;
     background-color: black;
-    color: white;
+    color: #03a9f4;
     font-size: 16px;
     padding: 12px 12px 12px 12px;
     border: 1px solid #ddd;
     margin-bottom: 12px;
+}
+
+#cs-searchbar:focus {
+    background-color: rgb(54, 54, 54);
+}
+
+@keyframes form-text-focus {
+    0% {
+        background-color: black;
+    }
+    99% {
+        background-color: rgb(54, 54, 54);
+    }
 }
 
 #cs-driver-data {
