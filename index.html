@@ -13,137 +13,91 @@
     <title>Illegear Support Page</title>
 </head>
 
-<body style="background-color:#1f2326">
-    <div class="row" style="background-color:black;color:red;padding-left:40px;position:fixed;width:100%;z-index:999">
+<body style="background-color:#1f2326;color:white;">
+    <div class="row" style="background-color:black;color:red;padding-left:40px;position:sticky;width:100%;z-index:999">
         <h2>Space for the navbar</h2>
     </div>
-    <div class="jumbotron jumbotron-fluid bg-support">
-        <div class="container-fluid">
-            <h1 style="text-align:center;height:250px">Space for Support Artwork</h1>
-        </div>
-    </div>
-    <div style="background-color:#1f2326" class="container text-white">
-
-        <div class="row mb-5">
-            <div class="d-flex flex-column col-12">
-                <h1>Find your product</h1>
-                <form class="lookup-form" action="">
-                    <div class="cs-formhead">Please enter your model to find your product</div>
-
-
-                    <input type="text" id="cs-searchbar" onkeyup="driversearch()" placeholder="Search for your model.."
-                        title="Type in a name">
-                    <div class="row">
-                        <ul class="mr-5" id="cs-driver-data">
-                            <div class="row">
-                                <li class="col-3"><a href="https://www.illegear.com/drivers/Raven.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>RAVEN i5-9300H
-                                        GTX
-                                        1050</a></li>
-                                <li class="col-3"><a href="https://www.illegear.com/drivers/Raven_coffee.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>RAVEN i7-9750H
-                                        GTX
-                                        1050</a></li>
-                                <li class="col-3"><a href="https://www.illegear.com/drivers/Raven.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>RAVEN i5-9300H
-                                        GTX
-                                        1650</a></li>
-                                <li class="col-3"><a href="https://www.illegear.com/drivers/Raven_coffee.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>RAVEN i7-9750H
-                                        GTX
-                                        1650</a></li>
-                                <li class="col-3"><a href="https://www.illegear.com/drivers/PRODIGY.zip"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>PRODIGY i7-9750H
-                                        GTX
-                                        1660Ti</a></li>
-                                <li class="col-3"><a href="https://www.illegear.com/drivers/ROGUE.zip"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>ROGUE i7-9750H
-                                        GTX
-                                        1660Ti</a></li>
-                                <li class="col-3"><a href="https://www.illegear.com/drivers/ONYX.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>ONYX i5-8300H GTX
-                                        1050Ti</a></li>
-                                <li class="col-3"><a href="https://www.illegear.com/drivers/ONYX.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>ONYX i7-8750H GTX
-                                        1050Ti</a></li>
-                                <li class="col-3"><a href="https://www.illegear.com/drivers/ONYX.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>ONYX i7-9750H RTX
-                                        2060</a></li>
-                                <li class="col-3"><a href="https://www.illegear.com/drivers/ONYX.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>ONYX i7-9750H RTX
-                                        2070</a></li>
-                                <li class="col-3"><a href="https://www.illegear.com/drivers/selenite.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>SELENITE i7-9750H
-                                        RTX2060</a></li>
-                                <li class="col-3"><a href="https://www.illegear.com/drivers/selenite.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>SELENITE i7-9750H
-                                        RTX2070</a></li>
-                            </div>
-                    </div>
-                    </ul>
-            </div>
-
-            <script>
-                function driversearch() {
-                    var input, filter, ul, li, a, i, txtValue;
-                    input = document.getElementById("cs-searchbar");
-                    filter = input.value.toUpperCase();
-                    ul = document.getElementById("cs-driver-data");
-                    li = ul.getElementsByTagName("li");
-                    for (i = 0; i < li.length; i++) {
-                        a = li[i].getElementsByTagName("a")[0];
-                        txtValue = a.textContent || a.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            li[i].style.display = "";
-                        } else {
-                            li[i].style.display = "none";
-                        }
-                    }
-                }
-            </script>
-            </form>
-        </div>
-        <div class="col-12">
-            <div class="row">
-                <div class="mt-3 col-8">
-                    <h4>Product support for Onyx</h4>
-                    <img class="img-fluid" src="images/illegear-onyx.jpg" alt=""><br>
+    <div class="row">
+        <div class="col-4">
+            <div style="height:100%;background-color:red;" class="p-3">
+                <h2>Search by Category</h2>
+                <div class="form-group">
+                    <label for="select-device">Select Model</label>
+                    <select class="form-control" id="select-model" onchange=showProcessor()>
+                        <option>--Please Select--</option>
+                        <option value="Raven">Raven</option>
+                        <option value="Onyx">Onyx</option>
+                        <option value="Prodigy">Prodigy</option>
+                        <option value="Rogue">Rogue</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="select-processor">Select Processor</label>
+                    <select class="form-control" id="select-processor" style="display:none;" onchange=showGpu()>
+                        <option>--Please Select--</option>
+                        <option value="i5-8300">i5-8300</option>
+                        <option value="i7-8750">i7-8750</option>
+                        <option value="i5-9300">i5-9300</option>
+                        <option value="i7-9750">i7-9750</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="select-gpu">Select Graphic Card</label>
+                    <select class="form-control" id="select-gpu" style="display:none;" onchange=showGpu()>
+                        <option>--Please Select--</option>
+                        <option value="GTX1060">GTX 1060</option>
+                        <option value="GTX1060">GTX 1070</option>
+                        <option value="GTX1060">GTX 2060</option>
+                        <option value="GTX1060">GTX 2070</option>
+                    </select>
                 </div>
             </div>
-            <div class="row">
-                <h1>Drivers to download</h1>
-                <table style="background-color:#1f2326;color:white;" class="table m-5">
-                    <tbody>
-                        <tr>
-                            <th scope="row">Intel Chipset</th>
-                            <td>
-                                Version 10.1.17541.8066
-                                Intel Chipset Driver
-                            </td>
-                            <td><a href="#">Download</a></td>
 
-                        </tr>
-                        <tr>
-                            <th scope="row">Intel Management Engine Component</th>
-                            <td>Version 12.0.2702.2 Intel Management Engine driver and software </td>
-                            <td><a href="#">Download</a></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Intel Rapid Storage Technology</th>
-                            <td>Version 16.0.1.1018</td>
-                            <td><a href="#">Download</a></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td><a href="#">Download All</a></td>
-                        </tr>
-                    </tbody>
-                </table>
+
+        </div>
+        <div class="col-8">
+            <div style="height:100%;background-color:teal;" class="p-3">
+                <h2>Search by keywords</h2>
             </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="row">
+            <div class="mt-3 col-8">
+                <h4>Product support for Onyx</h4>
+                <img class="img-fluid" src="images/illegear-onyx.jpg" alt=""><br>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Drivers to download</h1>
+            <table style="background-color:#1f2326;color:white;" class="table m-5">
+                <tbody>
+                    <tr>
+                        <th scope="row">Intel Chipset</th>
+                        <td>
+                            Version 10.1.17541.8066
+                            Intel Chipset Driver
+                        </td>
+                        <td><a href="#">Download</a></td>
 
-
-
+                    </tr>
+                    <tr>
+                        <th scope="row">Intel Management Engine Component</th>
+                        <td>Version 12.0.2702.2 Intel Management Engine driver and software </td>
+                        <td><a href="#">Download</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Intel Rapid Storage Technology</th>
+                        <td>Version 16.0.1.1018</td>
+                        <td><a href="#">Download</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td><a href="#">Download All</a></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
     </div>
@@ -151,7 +105,15 @@
 
     <!-- Optional JavaScript -->
     <script>
-
+        var model, processor, GPU;
+        function showProcessor() {
+            var model = document.getElementById("select-model").value;
+            document.getElementById("select-processor").style.display = "block";
+        }
+        function showGpu() {
+            var processor = document.getElementById("select-processor").value;
+            document.getElementById("select-gpu").style.display = "block";
+        }
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
