@@ -22,7 +22,7 @@ body {
 }
 #fadetowhite {
     transition:0.5s;
-    z-index:2;
+    z-index:99;
     opacity:1;
     height:100vh;
     width:100%;
@@ -49,8 +49,4 @@ body {
     .menulogo {
         display: none;
     }
-}
-
-.container-fluid div {
-    transition:opacity 0.5s ,display 0s;
 }

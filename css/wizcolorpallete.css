@@ -1,3 +1,7 @@
 .bg-black {
     background-color:black;
 }
+
+.bg-navbar {
+    background-color:rgba(0,0,0,0.5);
+}
