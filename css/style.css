@@ -23,7 +23,7 @@ body {
 #fadetowhite {
     transition:0.5s;
     z-index:2;
-    opacity:0;
+    opacity:1;
     height:100vh;
     width:100%;
     position:fixed;
