@@ -5,267 +5,72 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Illegear Support Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/wizcolorpallete.css">
+    <title>PHP Test Arena</title>
 </head>
 
-<body style="background-color:#1f2326;color:white;">
-    <div class="row" style="background-color:black;color:red;padding-left:40px;position:fixed;width:100%;z-index:999">
-        <h2>Space for the navbar</h2>
+<body>
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-transparent">
+        
+        <a class="navbar-brand d-block d-md-none" href="#">Drablo Productions Logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    </div>
-
-    <div class="jumbotron jumbotron-fluid bg-support">
-        <div class="container-fluid">
-            <h1 style="text-align:center;max-height:250px;margin-top:200px">Search for your product</h1>
-            <div class="autocomplete" style="width:300px;">
-                <form autocomplete="off" action="/action_page.php">
-                    <input id="myInput" type="text" name="models" placeholder="Search">
-                </form>
-            </div>
-            </p>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item mr-3 active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="tooltip" data-placement="top" title="A preview of our work">Portfolio</a>
+                </li>
+                <li class="nav-item mx-auto">
+                    <a class="d-md-none d-lg-block" href="#"> <img src="img/logo.png" id="wdlogo" alt="logo"></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pricing (?)
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Standard</a>
+                        <a class="dropdown-item" href="#">Memory</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Diamond</a>
+                        <a class="dropdown-item" href="#">Platinum</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Book Us
+                    </a>
+                </li>
+            </ul>
         </div>
-    </div>
+    </nav>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-4">
-                <div style="height:100%;" class="p-3">
-                    <h2>Search by Category</h2>
-                    <div class="form-group">
-                        <label for="select-device">Select Model</label>
-                        <select class="form-control" id="select-model" onchange=showProcessor()>
-                            <option>--Please Select--</option>
-                            <option value="Raven">Raven</option>
-                            <option value="Onyx">Onyx</option>
-                            <option value="Prodigy">Prodigy</option>
-                            <option value="Rogue">Rogue</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="select-processor" id="select-processor-title" style="display:none;">Select
-                            Processor</label>
-                        <select class="form-control" id="select-processor" style="display:none;" onchange=showGpu()>
-                            <option>--Please Select--</option>
-                            <option value="i5-8300">i5-8300</option>
-                            <option value="i7-8750">i7-8750</option>
-                            <option value="i5-9300">i5-9300</option>
-                            <option value="i7-9750">i7-9750</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="select-gpu" id="select-gpu-title" style="display:none;">Select Graphic Card</label>
-                        <select class="form-control" id="select-gpu" style="display:none;">
-                            <option>--Please Select--</option>
-                            <option value="GTX1060">GTX 1060</option>
-                            <option value="GTX1060">GTX 1070</option>
-                            <option value="GTX1060">GTX 2060</option>
-                            <option value="GTX1060">GTX 2070</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8">
-                <div style="height:100%;" class="p-3">
-                    <input type="text" id="cs-searchbar" onkeyup="driversearch()" placeholder="Search for your model.."
-                        title="Type in a name">
-                    <div class="row">
-                        <ul class="mr-5" id="cs-driver-data">
-                            <div class="row">
-                                <li class="col-xl-4"><a href="https://www.illegear.com/drivers/Raven.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>RAVEN i5-9300H
-                                        GTX
-                                        1050</a><br><p>Download Link</p></li>
-                                <li class="col-xl-4"><a href="https://www.illegear.com/drivers/Raven_coffee.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>RAVEN i7-9750H
-                                        GTX
-                                        1050</a></li>
-                                <li class="col-xl-4"><a href="https://www.illegear.com/drivers/Raven.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>RAVEN i5-9300H
-                                        GTX
-                                        1650</a></li>
-                                <li class="col-xl-4"><a href="https://www.illegear.com/drivers/Raven_coffee.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>RAVEN i7-9750H
-                                        GTX
-                                        1650</a></li>
-                                <li class="col-xl-4"><a href="https://www.illegear.com/drivers/PRODIGY.zip"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>PRODIGY i7-9750H
-                                        GTX
-                                        1660Ti</a></li>
-                                <li class="col-xl-4"><a href="https://www.illegear.com/drivers/ROGUE.zip"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>ROGUE i7-9750H
-                                        GTX
-                                        1660Ti</a></li>
-                                <li class="col-xl-4"><a href="https://www.illegear.com/drivers/ONYX.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>ONYX i5-8300H GTX
-                                        1050Ti</a></li>
-                                <li class="col-xl-4"><a href="https://www.illegear.com/drivers/ONYX.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>ONYX i7-8750H GTX
-                                        1050Ti</a></li>
-                                <li class="col-xl-4"><a href="https://www.illegear.com/drivers/ONYX.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>ONYX i7-9750H RTX
-                                        2060</a></li>
-                                <li class="col-xl-4"><a href="https://www.illegear.com/drivers/ONYX.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>ONYX i7-9750H RTX
-                                        2070</a></li>
-                                <li class="col-xl-4"><a href="https://www.illegear.com/drivers/selenite.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>SELENITE i7-9750H
-                                        RTX2060</a></li>
-                                <li class="col-xl-4"><a href="https://www.illegear.com/drivers/selenite.rar"><i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i>SELENITE i7-9750H
-                                        RTX2070</a></li>
-                            </div>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="m-4">
-                    <h4>Product support for Onyx</h4>
-                    <img class="img-fluid" src="images/illegear-onyx.jpg" alt=""><br>
-                </div>
-                <div class="view-table">
-                    <h1>Drivers to download</h1>
-                    <table style="background-color:#1f2326;color:white;" class="table">
-                        <tbody>
-                            <tr>
-                                <th scope="row">Intel Chipset</th>
-                                <td>
-                                    Version 10.1.17541.8066
-                                    Intel Chipset Driver
-                                </td>
-                                <td><a href="#"><i class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
+        <div class="row bg-black" style="height:100vh">
 
-                            </tr>
-                            <tr>
-                                <th scope="row">Intel Management Engine Component</th>
-                                <td>Version 12.0.2702.2 Intel Management Engine driver and software </td>
-                                <td><a href="#"><i class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Intel Rapid Storage Technology</th>
-                                <td>Version 16.0.1.1018</td>
-                                <td><a href="#"><i class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Intel I/O</th>
-                                <td>Version  v30.100.1727.1</td>
-                                <td><a href="#"><i class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Audio</th>
-                                <td>Version 4.68</td>
-                                <td><a href="#"><i class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Card Reader</th>
-                                <td>1.00.0000</td>
-                                <td><a href="#"><i class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Touchpad</th>
-                                <td>19.3.27.2.07Nov2016</td>
-                                <td><a href="#"><i class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Wifi</th>
-                                <td>20.20.3</td>
-                                <td><a href="#"><i class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Bluetooth</th>
-                                <td>20.30.0</td>
-                                <td><a href="#"><i class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">LAN</th>
-                                <td>1.00.0036</td>
-                                <td><a href="#"><i class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Intel Graphics</th>
-                                <td>1.7.54.0</td>
-                                <td><a href="#"><i class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Nvidia Graphics</th>
-                                <td>385.41</td>
-                                <td><a href="#"><i class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Illegear Command Center</th>
-                                <td>1.7.54.0</td>
-                                <td><a href="#"><i class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Sound Blaster</th>
-                                <td>1.0.8.0</td>
-                                <td><a href="#"><i class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td><a href="#">Download All <i
-                                            class="fontawesome-icon fa-download fas circle-yes"></i></a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+        </div>
+        <div class="row bg-primary" style="height:100vh">
+
         </div>
     </div>
-    <div class="footer" style="background-color:black;height:100%;">
-        <h2>Space for the footer</h2>
-    </div>
-
 
     <!-- Optional JavaScript -->
-    <script>
-        var model, processor, GPU;
-        function showProcessor() {
-            var model = document.getElementById("select-model").value;
-            document.getElementById("select-processor").style.display = "block";
-            document.getElementById("select-processor-title").style.display = "block";
-        }
-        function showGpu() {
-            var processor = document.getElementById("select-processor").value;
-            document.getElementById("select-gpu").style.display = "block";
-            document.getElementById("select-gpu-title").style.display = "block";
-        }
-        function driversearch() {
-            var input, filter, ul, li, a, i, txtValue;
-            input = document.getElementById("cs-searchbar");
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("cs-driver-data");
-            li = ul.getElementsByTagName("li");
-            for (i = 0; i < li.length; i++) {
-                a = li[i].getElementsByTagName("a")[0];
-                txtValue = a.textContent || a.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
-                }
-                else {
-                    li[i].style.display = "none";
-                }
-            }
-        }
-    </script>
-
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </body>
 
 </html>
