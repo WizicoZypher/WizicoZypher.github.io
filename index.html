@@ -24,10 +24,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item mr-3 active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#" onclick="NavSwitch('home')">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="A preview of our work">Portfolio</a>
+                    <a class="nav-link" href="#" onclick="NavSwitch('portfolio')" data-toggle="tooltip" data-placement="bottom" title="A preview of our work">Portfolio</a>
                 </li>
                 <li class="nav-item mx-auto">
                     <a href="#"><img src="img/logo.png" class="dlogo menulogo" alt="logo"></a>
@@ -45,7 +45,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Feel free to contact us for more information!">
+                    <a class="nav-link" href="#" onclick="NavSwitch('book')" data-toggle="tooltip" data-placement="bottom" title="Feel free to contact us for more information!">
                         Book Us
                     </a>
                 </li>
@@ -53,10 +53,16 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <div class="row bg-black" style="height:100vh">
+        <div id="home" class="row bg-black" style="height:100vh">
+            
+        </div>
+        <div id="portfolio" class="row bg-primary" style="height:100vh">
 
         </div>
-        <div class="row bg-primary" style="height:100vh">
+        <div id="pricing" class="row bg-secondary" style="height:100vh">
+
+        </div>
+        <div id="book" class="row bg-warning" style="height:100vh">
 
         </div>
     </div>
@@ -66,11 +72,13 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/javascript.js"></script>
     <script>
         $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
+    
 </body>
 
 </html>
