@@ -2,6 +2,10 @@
     background-color:black;
 }
 
+.bg-book-side {
+    background:url(https://icdn2.digitaltrends.com/image/blackmagic-design-pocket-cinema-camera-4k-review-5-720x720.jpg)
+}
+
 .bg-navbar {
     background-color:rgba(0,0,0,0.5);
 }
