@@ -35,8 +35,8 @@
                         title="A preview of our work">Portfolio</a>
                 </li>
                 <li class="nav-item mx-auto">
-                    <a href="javascript:setTimeout(()=>{window.location = 'index.html' },500); onclick="FadeOut()""><img src="img/logo.png"
-                            class="dlogo menulogo" alt="logo"></a>
+                    <a href="javascript:setTimeout(()=>{window.location = 'index.html' },500); onclick="
+                        FadeOut()""><img src="img/logo.png" class="dlogo menulogo" alt="logo"></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="javascript:setTimeout(()=>{window.location = 'aboutus.html' },500);"
@@ -66,7 +66,28 @@
     </div>
     <div class="container-fluid">
         <div class="row bg-black" style="height:100vh">
+            <div class="col-md-8" style="margin-top:60px">
+                <form action="#">
+                    <div class="form-group cs-form-group">
+                        <label for="input1">Info:</label>
+                        <input type="text" class="form-control">
+                    </div>  
+                    <div class="form-group cs-form-group">
+                        <label for="input2">Lagi more info:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group cs-form-group">
+                        <label for="input3">Many Many info:</label>
+                        <textarea class="form-control" rows="5" id="input3"></textarea>
+                    </div>
+                    <div class="form-group cs-form-group">
+                        <button type="submit" class="btn btn-secondary" onclick="alert('Not yet done T_T')">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4">
 
+            </div>
         </div>
     </div>
 

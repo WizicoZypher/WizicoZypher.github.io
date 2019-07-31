@@ -178,3 +178,10 @@ body, html {
         display: none;
     }
 }
+
+
+/*bookingpage css*/
+.cs-form-group {
+    margin-right:30%;
+    margin-left:10%;
+}
