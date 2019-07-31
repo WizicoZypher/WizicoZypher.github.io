@@ -76,6 +76,8 @@ body::-webkit-scrollbar-thumb:active {
 body {
     font-family: raleway, sans-serif;
 }
+
+
 /*Some extra code*/
 
 body, html {
@@ -185,3 +187,9 @@ body, html {
     margin-right:30%;
     margin-left:10%;
 }
+
+/* Portfolio Page */
+.portfolio-item {
+    background-image: url("https://www.shootingpixels.net/wp-content/uploads/2018/03/splash01.jpg");
+    min-height: 100%;
+  }
