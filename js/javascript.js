@@ -12,7 +12,3 @@ function hidewhitescreen() {
 }
 onload(FadeIn(),hidewhitescreen());
 
-function ScrollAnimate(){
-    const element =  document.querySelector('.my-element')
-    element.classList.add('animated', 'bounceOutLeft')
-}
