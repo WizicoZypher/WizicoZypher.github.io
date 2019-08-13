@@ -6,8 +6,13 @@ function FadeOut() {
 function FadeIn() {
     whitescreen.style.opacity = "0";
 }
-onload(FadeIn(),hidewhitescreen());
 
 function hidewhitescreen() {
     setTimeout(function () { whitescreen.style.display = "none"; }, 500);
+}
+onload(FadeIn(),hidewhitescreen());
+
+function ScrollAnimate(){
+    const element =  document.querySelector('.my-element')
+    element.classList.add('animated', 'bounceOutLeft')
 }

@@ -10,13 +10,22 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-        <link rel="icon" href="img/logo.png">
+    <link rel="icon" href="img/logo.png">
+
+
+    <!--Used Libraries-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+    <!--Custom CSS-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/wizcolorpallete.css">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="css/animate.css">
     <title>Drablo Productions</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
     <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-navbar">
 
         <a class="navbar-brand d-sm-block d-md-none" href="#"><img src="img/logo.png" class="dlogo" alt="logo"></a>
@@ -28,34 +37,35 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item mr-3">
-                    <a class="nav-link" href="index.html"
-                        onclick="FadeOut()">Home</a>
+                    <a class="nav-link" href="index.html" onclick="FadeOut()">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="portfolio.html"
-                        onclick="FadeOut()" data-toggle="tooltip" data-placement="bottom"
-                        title="A preview of our work">Portfolio</a>
+                    <a class="nav-link" href="portfolio.html" onclick="FadeOut()" data-toggle="tooltip"
+                        data-placement="bottom" title="A preview of our work">Portfolio</a>
                 </li>
                 <li class="nav-item mx-auto">
-                    <a href="index.html"onclick="FadeOut()"><img
-                            src="img/logo.png" class="dlogo menulogo" alt="logo"></a>
+                    <a href="index.html" onclick="FadeOut()"><img src="img/logo.png" class="dlogo menulogo"
+                            alt="logo"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="aboutus.html"
-                        onclick="FadeOut()">
+                    <a class="nav-link active" href="aboutus.html" onclick="FadeOut()">
                         About Us
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="book.html"
-                        onclick="FadeOut()" data-toggle="tooltip" data-placement="bottom"
-                        title="Feel free to contact us for more information!">
+                    <a class="nav-link" href="book.html" onclick="FadeOut()" data-toggle="tooltip"
+                        data-placement="bottom" title="Feel free to contact us for more information!">
                         Book Us
                     </a>
                 </li>
             </ul>
         </div>
     </nav>
+    <ul id="cs-scroller-bottom" class="list-group" style="border:0px solid white;">
+        <a class="list-group-item bg-transparent" href="#divblock2" onclick="ScrollAnimate()">
+            <i class="fas fa-sort-down"></i>
+        </a>
+    </ul>
     <div id="fadetowhite">
         <div class="preloader">
             <div class="lds-ellipsis">
@@ -66,13 +76,23 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div id="home" class="row bg-black" style="height:100vh">
+    <div class="container-fluid" data-spy="scroll" data-target="#list-example" data-offset="0">
+        <div id="divblock1" class="row bg-black" style="height:100vh">
+
+        </div>
+        <div id="divblock2" class="row bg-secondary" style="height:100vh">
+
+        </div>
+        <div id="divblock3" class="row bg-secondary" style="height:100vh">
 
         </div>
     </div>
 
     <!-- Optional JavaScript -->
+
+    <script>
+    
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

@@ -193,3 +193,18 @@ body, html {
     background-image: url("https://www.shootingpixels.net/wp-content/uploads/2018/03/splash01.jpg");
     min-height: 100%;
 }
+
+/*about us*/
+#cs-scroller-bottom {
+  position:fixed;
+  right:1%;
+  bottom:1%;
+  background-color:transparent;
+  width:auto;
+  height:auto;
+}
+
+#cs-scroller-bottom i {
+  font-size:60px;
+  color:grey;
+}
