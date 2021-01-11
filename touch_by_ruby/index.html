@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="css/uikit.css" />
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body>
+
+    <nav class="uk-navbar-container uk-margin hideonmobile" uk-navbar="mode:click">
+        <div class="uk-navbar-center">
+            <div class="uk-navbar-center-left">
+                <div>
+                    <ul class="uk-navbar-nav uk-margin-top">
+                        <li><a href="#">HOME</a></li>
+                        <li>
+                            <a href="#modal-full" uk-toggle>Types of Services</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a class="uk-navbar-item uk-logo" href="#">
+                <img data-src="images/logo.min.png" width="140" height="140" alt="" uk-img>
+            </a>
+            <div class="uk-navbar-center-right">
+                <div>
+                    <ul class="uk-navbar-nav uk-margin-top">
+                        <li><a href="#">Blogspace</a></li>
+                        <li><a href="#">Socials</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="modal-full" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+            <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+                <div class="uk-background-cover" style="background-image: url('images/logo.png');" uk-height-viewport>
+                </div>
+                <div class="uk-padding-large">
+                    <h1>Types of Services</h1>
+                    <ul uk-accordion>
+                        <li>
+                            <a class="uk-accordion-title" href="#">Body Scrub Services</a>
+                            <div class="uk-accordion-content">
+                                <table class="uk-table uk-table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Service</th>
+                                            <th>Time Taken</th>
+                                            <th>Price (B$)</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <td>Table Footer</td>
+                                            <td>Table Footer</td>
+                                            <td>Table Footer</td>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <div id="my-id" class="uk-flex-top" uk-modal>
+                                            <div class="uk-modal-dialog uk-margin-auto-vertical"></div>
+                                        </div>
+                                        <tr>
+                                            <td>Organic Brown Suger Scrub (Jar)</td>
+                                            <td>60 Minutes</td>
+                                            <td>B$35</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Name of Service 2</td>
+                                            <td>60 Minutes</td>
+                                            <td>B$35</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">Body Massage Service</a>
+                            <div class="uk-accordion-content">
+                                <ul class="uk-list">
+                                    <li>Item 1</li>
+                                    <li>Item 2</li>
+                                    <li>Item 3</li>
+                                    <li>Item 4</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="uk-container uk-container-xlarge">
+        <h1 class="uk-text-center"><span>Popular Massage Spa Services</span></h1>
+        <div class="uk-grid-match uk-child-width-expand@s uk-text-center" uk-grid>
+            <div>
+                <div class="uk-card uk-card-hover uk-card-body uk-background-muted">
+                    <h3 class="uk-card-title">Full Body (Basil Massage Oil)</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-hover uk-card-body uk-background-muted">
+                    <h3 class="uk-card-title">Hover</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-hover uk-card-body uk-background-muted">
+                    <h3 class="uk-card-title">Hover</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Custom Javascript-->
+    <script src="js/javascript.js"></script>
+
+    <!-- UIkit JS -->
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+</body>
+
+</html>
