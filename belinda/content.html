@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Birthday Card</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="m-3">
+            Click on those messages. Preferrably first message ^_^/<br>
+            Oh yeah. Added some background music because why not? <br><b>(Computer volume at 30% reccomended)</b><br>
+            <audio controls autoplay>
+                <source src="audio/13.ogg" type="audio/ogg">
+            </audio>
+        </div>
+        <div class="accordion accordion-flush mt-1" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Message #1 <div class="text-light bg-dark" data-bs-toggle="tooltip" data-bs-placement="right" title="Click on these messages" style="padding-left:2px;padding-right:2px;margin-left:20px;border:1px solid grey;border-radius:5px;">?</div>
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <p>Happy Birthday Belinda</p><br>
+                        <p>When I think about it. Showing up with anything is literally risking passing you something that's possibly contaminated with COVID-19</p>
+                        <p>I've been working with the scientists at the new testing facilities at Bridex so I've been the red zones of ALL redzones in the country.</p>
+                        <p>Knowing that risk, I'm more stuck on how I can send something without dipping the whole present in alcohol and placing a soggy mess on your front door</p>
+                        <p>So I sat down in my room thinking about what on earth I can do to send you a good birthday present that can make up for my tardiness</p>
+                        <p>Then I realized... I'm a freaking web developer, I can make a fancy birthday card that can MOVE and top it off with a small gift</p>
+                        <p>To receive your gift, please open the next message~~</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Message #2
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <p>First things first. I finally managed to create a Spotify account and have it connected to my Spotify Premium Home plan</p>
+                        <p>
+                            <span style="color:darkgreen">Your username:</span><br>
+                            belindajenspotify@outlook.com<br>
+                            <span style="color:darkslategray">Password</span><br>
+                            happybirthdaytoYOU1-9<br>
+                        </p>
+                        <p>
+                            Yes. Very original password. You change it if ya don't like it \^_^/<br>
+                            You can download the spotify app on your phone and use these credentials to login.<br>
+                            With premium, you can make your own playlists, download songs and play them offline, and absolutely no advertisements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Message #3
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <p>Now, this is where I'm supposed to write a closing statement that is both very smart and touching</p>
+                        <p>But I can't think of anything since I spent way too much effort on a gift that I could've given over a single WhatsApp message</p>
+                        <p>So I shall close this birthday 'card' with a final greeting</p>
+                        <h3>Happy Birthday Belinda!</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+</script>
+</html>
